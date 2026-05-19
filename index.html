@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Newson Sportec Memorial Day Tribute</title>
+
+  <meta name="description" content="Newson Sportec Memorial Day tribute honoring courage, sacrifice, freedom, and the brave soldiers who served.">
+
+  <meta property="og:title" content="Newson Sportec Memorial Day Tribute">
+  <meta property="og:description" content="We ride free because of the brave. Newson Sportec honors the courage, sacrifice, and service of our heroes this Memorial Day.">
+  <meta property="og:image" content="https://newsonsportec.github.io/memorial-day-newson-sportec/memorial-day-poster.png">
+  <meta property="og:url" content="https://newsonsportec.github.io/memorial-day-newson-sportec/">
+  <meta property="og:type" content="website">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(10, 80, 90, 0.35), transparent 35%),
+        linear-gradient(180deg, #050505, #101010 45%, #050505);
+      color: #ffffff;
+    }
+
+    header {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.92);
+      border-bottom: 3px solid #0b8f83;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+
+    .nav {
+      max-width: 1300px;
+      margin: auto;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    .brand span {
+      color: #f26b21;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: bold;
+      padding: 10px 14px;
+      border-radius: 8px;
+      transition: 0.3s;
+      text-transform: uppercase;
+    }
+
+    .nav-links a:hover {
+      background: #f26b21;
+      color: #000000;
+    }
+
+    .hero {
+      max-width: 1400px;
+      margin: auto;
+      padding: 45px 20px 30px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .hero-text {
+      padding: 20px;
+    }
+
+    .small-title {
+      color: #f26b21;
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 68px;
+      line-height: 0.95;
+      margin: 0;
+      text-transform: uppercase;
+      color: #ffffff;
+      text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+
+    h1 span {
+      color: #d42121;
+    }
+
+    .hero-text p {
+      font-size: 24px;
+      line-height: 1.6;
+      color: #eeeeee;
+      max-width: 700px;
+      margin: 24px 0;
+    }
+
+    .tribute-line {
+      font-size: 30px;
+      font-weight: 900;
+      color: #ffffff;
+      background: linear-gradient(90deg, #0b8f83, #f26b21);
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      box-shadow: 0 0 25px rgba(242, 107, 33, 0.25);
+    }
+
+    .flag-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 22px;
+      padding: 22px;
+      text-align: center;
+      box-shadow: 0 0 35px rgba(0, 0, 0, 0.45);
+    }
+
+    .flag-card img {
+      width: 100%;
+      max-width: 460px;
+      border-radius: 16px;
+      background: #ffffff;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+    }
+
+    .flag-card p {
+      margin: 16px 0 0;
+      font-size: 20px;
+      font-weight: bold;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .poster-section {
+      max-width: 1350px;
+      margin: auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .poster-section h2 {
+      font-size: 46px;
+      color: #f26b21;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    .poster-section p {
+      font-size: 22px;
+      color: #dddddd;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto 30px;
+    }
+
+    .poster-image {
+      width: 100%;
+      max-width: 1100px;
+      border-radius: 22px;
+      box-shadow:
+        0 0 35px rgba(0, 0, 0, 0.65),
+        0 0 35px rgba(11, 143, 131, 0.22);
+      border: 3px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .message-section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .message-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .message-card {
+      background: #111111;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-top: 5px solid #0b8f83;
+      border-radius: 18px;
+      padding: 28px 20px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+      transition: 0.3s;
+    }
+
+    .message-card:hover {
+      transform: translateY(-6px);
+      border-top-color: #f26b21;
+      box-shadow: 0 0 30px rgba(242, 107, 33, 0.25);
+    }
+
+    .message-card .icon {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .message-card h3 {
+      font-size: 24px;
+      margin: 8px 0 10px;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    .message-card p {
+      font-size: 18px;
+      line-height: 1.5;
+      color: #cccccc;
+      margin: 0;
+    }
+
+    .social-section {
+      max-width: 1200px;
+      margin: 45px auto;
+      padding: 35px 25px;
+      background: linear-gradient(135deg, #071514, #111111);
+      border-radius: 22px;
+      border-top: 3px solid #0b8f83;
+      border-bottom: 3px solid #f26b21;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.45);
+    }
+
+    .social-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .social-text h2 {
+      font-size: 38px;
+      margin: 0 0 12px;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    .social-text p {
+      font-size: 20px;
+      color: #dddddd;
+      line-height: 1.6;
+      margin: 0 0 22px;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      color: #ffffff;
+      background: #0b8f83;
+      padding: 14px 20px;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      background: #f26b21;
+      color: #000000;
+      transform: translateY(-2px);
+    }
+
+    .small-flag {
+      text-align: center;
+    }
+
+    .small-flag img {
+      width: 100%;
+      max-width: 260px;
+      border-radius: 14px;
+      background: #ffffff;
+      border: 3px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 0 22px rgba(255, 255, 255, 0.22);
+    }
+
+    .small-flag p {
+      margin: 12px 0 0;
+      font-size: 17px;
+      color: #ffffff;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 35px 20px;
+      color: #bbbbbb;
+      font-size: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .footer strong {
+      color: #ffffff;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      h1 {
+        font-size: 48px;
+      }
+
+      .tribute-line {
+        font-size: 22px;
+      }
+
+      .message-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .social-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .social-links {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav {
+        justify-content: center;
+      }
+
+      .brand {
+        font-size: 22px;
+        text-align: center;
+      }
+
+      .nav-links a {
+        font-size: 14px;
+        padding: 8px 10px;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+      .hero-text p {
+        font-size: 19px;
+      }
+
+      .poster-section h2 {
+        font-size: 34px;
+      }
+
+      .poster-section p {
+        font-size: 18px;
+      }
+
+      .message-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="nav">
+      <div class="brand">Newson <span>Sportec</span></div>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#tribute">Tribute</a>
+        <a href="#values">Values</a>
+        <a href="#social">Social Media</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="hero-text">
+        <div class="small-title">Memorial Day Tribute</div>
+
+        <h1>
+          Honor. <br>
+          Courage. <br>
+          <span>Remember.</span>
+        </h1>
+
+        <p>
+          This Memorial Day, Newson Sportec respectfully honors the brave soldiers
+          who served, sacrificed, and protected freedom for future generations.
+        </p>
+
+        <div class="tribute-line">
+          We ride free because of the brave
+        </div>
+      </div>
+
+      <div class="flag-card">
+        <img src="american-flag.gif" alt="Waving American flag">
+        <p>Respect. Honor. Remember.</p>
+      </div>
+
+    </section>
+
+    <section class="poster-section" id="tribute">
+
+      <h2>Newson Sportec Memorial Day</h2>
+
+      <p>
+        A respectful racing-inspired tribute combining Newson Sportec performance style
+        with gratitude for the courage and sacrifice of America’s heroes.
+      </p>
+
+      <img class="poster-image" src="memorial-day-poster.png" alt="Newson Sportec Memorial Day tribute poster">
+
+    </section>
+
+    <section class="message-section" id="values">
+
+      <div class="message-grid">
+
+        <div class="message-card">
+          <div class="icon">🇺🇸</div>
+          <h3>Freedom</h3>
+          <p>We remember that freedom is protected by brave men and women.</p>
+        </div>
+
+        <div class="message-card">
+          <div class="icon">⭐</div>
+          <h3>Honor</h3>
+          <p>We honor those who served with courage, discipline, and strength.</p>
+        </div>
+
+        <div class="message-card">
+          <div class="icon">🛡️</div>
+          <h3>Sacrifice</h3>
+          <p>We respect the heroes who gave everything for our country.</p>
+        </div>
+
+        <div class="message-card">
+          <div class="icon">🤝</div>
+          <h3>Gratitude</h3>
+          <p>We are forever grateful for the service of our military families.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="social-section" id="social">
+
+      <div class="social-wrapper">
+
+        <div class="social-text">
+          <h2>Follow Newson Sportec</h2>
+
+          <p>
+            Stay connected with Newson Sportec for motorsport-inspired visuals,
+            wheel parts concepts, racing design, and performance style.
+          </p>
+
+          <div class="social-links">
+            <a href="https://www.facebook.com/Newsonsportecnews" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/newsonsportec/" target="_blank">Instagram</a>
+            <a href="https://www.linkedin.com/company/111531327/admin/dashboard/" target="_blank">LinkedIn</a>
+            <a href="https://www.youtube.com/NEWSONSPORTEC" target="_blank">YouTube</a>
+          </div>
+        </div>
+
+        <div class="small-flag">
+          <img src="american-flag.gif" alt="Waving American flag near social media">
+          <p>Memorial Day Tribute</p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <strong>© 2026 Newson Sportec.</strong> Memorial Day Tribute. Respecting those who served.
+  </footer>
+
+</body>
+</html>
